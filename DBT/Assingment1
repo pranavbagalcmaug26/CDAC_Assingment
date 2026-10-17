@@ -1,0 +1,100 @@
+create database Assingment1;
+use Assingment1;
+
+-- Question 1
+-- 1. Define a schema for a Library Management System with the following entities:
+--   - Books
+--   - Authors
+--   - Members
+--   - Borrow_Records
+
+create table Author(Author_ID int, Author_Name varchar(20));
+create table book(Book_ID int,Title varchar(20),Author_ID int);
+create table Member(Member_ID int,Name varchar(20),Email varchar(20));
+create table Borrow_records(Record_ID int,Book_ID int,Member_ID int,Borrow_Date date,Return_Date date);
+
+-- Question 2
+-- 2. Write the SQL command to create a table Authors with the following fields:
+--   - author_id (Primary Key, INT)
+--   - name (VARCHAR(100))
+--   - country (VARCHAR(50))
+
+create table Authors(author_id int primary key,name varchar(100),country varchar(50));
+
+-- 3. Write the SQL command to create a table Books with the following fields:
+--   - book_id (Primary Key, INT)
+--   - title (VARCHAR(150))
+--   - author_id (Foreign Key referencing Authors)
+--   - published_year (YEAR)
+--   - available_copies (INT)
+
+create table Books(book_id int primary key,title varchar(150),author_id int, foreign key(author_id)references Authors(Author_id),published_year year,Available_copies int);
+
+-- 4. Write the SQL command to create a table Members with:
+--   - member_id (Primary Key, INT)
+--   - name (VARCHAR(100))
+--   - email (VARCHAR(100), unique)
+--   - phone (VARCHAR(15))
+
+create table Members(member_id int primary key,name varchar(100),email varchar(100) unique,phone varchar(15));
+
+-- 5. Write the SQL command to create a table Borrow_Records with:
+--   - record_id (Primary Key, INT)
+--   - member_id (Foreign Key referencing Members)
+--   - book_id (Foreign Key referencing Books)
+--   - borrow_date (DATE)
+--   - return_date (DATE)
+
+create table Borrow_Records(record_id int primary key,member_id int,foreign key(member_id)references Members(member_id),
+book_id int,foreign key(book_id)references Books(book_id),borrow_date date,return_date date);
+
+-- 6. Modify the Books table to add a column genre of type VARCHAR(50).
+
+alter table books add column genre varchar(50);
+
+-- 7. Write the SQL command to drop the Borrow_Records table.
+
+Drop table Borrow_Records;
+
+-- 8. Insert 3 records into the Authors table.
+
+insert into Authors(author_id,name,country)values(101,'Pranav','India'),(102,'Sanjay','India'),(103,'Manisha','India');
+
+-- 9. Insert 5 books into the Books table.
+
+insert into Books(book_id,title,author_id,published_year,Available_copies)
+values(1,'JAVA',101,2022,5),
+(2,'C++',102,2020,3),
+(3,'ADS',103,2023,4),
+(4,'SQL',101,2021,6),
+(5,'Web Technologies',102,2024,2);
+
+-- 10. Insert 3 members into the Members table.
+
+insert into Members(member_id,name,email,phone)
+values(101,'Pranav','pranav@gmail.com','7977504589'),
+(102,'Sanjay','sanjay@gmail.com','9892766557'),
+(103,'Manisha','manisha@gmail.com','9930147964');
+
+-- 11. Insert 4 borrow records into the Borrow_Records table.
+insert into Borrow_Records(record_id,member_id,book_id,borrow_date,return_date)
+values(101,101,1,'2026-10-01','2026-10-10'),
+(102,102,2,'2026-10-02','2026-10-11'),
+(103,103,3,'2026-10-03','2026-10-12'),
+(104,101,4,'2026-10-04','2026-10-13');
+
+-- 12. Write an SQL query to select all books where published_year is after 2015.
+
+select * from Books where published_year>2015;
+
+-- 13. Write a SQL query to create a foreign key & primary key relationship between two tables.
+
+-- 14. Write an SQL query to find all members who have borrowed the book with title 'Database Systems'.
+
+select * from books where title='';
+
+-- 16. Delete a record from Members where member_id = 3.
+
+delete from borrow_records where member_id=103;
+delete from Members where member_id=103;
+select * from members;
