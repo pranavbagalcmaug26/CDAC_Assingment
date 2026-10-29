@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="head">
+        <div class="brand">
+            <img src="images/pranav.jpg" alt="Pranav image" width="60px">
+            <span id="pranav_portfolio"><u>Pranav's Portfolio</u></span>
+        </div>
+
+        <nav id="head_nav">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contacts</a>
+            <button id="lightMode">Dark Mode</button>
+        </nav>
+    </header><br><br>
+    <div class="welcome">
+        <label>Enter Your Name: </label><br><br>
+        <input type="text" name="text" id="inText"><br><br>
+        <button id="btnn">Submit</button>
+    </div>
+    <div class="hero">
+        <h1>Introduction</h1>
+        <p>
+            My name is Pranav Bagal, and I am from Navi Mumbai, Maharashtra.
+            I completed my 10th and 12th from the Maharashtra State Board. 
+            I completed my Bachelor of Engineering in Computer Science with specializations in IoT,
+            Cybersecurity, and Blockchain Technology from the University of Mumbai. 
+            Currently, I am pursuing the PG Certificate Programme in Advanced Computing 
+            from C-DAC Mumbai. Talking about my projects, I have worked on a Smart Home Automation
+            System, an AI Chatbot, and a Cybercrime Trap System using Honeypots. I have also 
+            developed a full-stack NGO Management Platform using React, Spring Boot, and MySQL. 
+            Through these projects, I have improved my programming and problem-solving skills. 
+            I have also gained practical experience through internships in Web Development and 
+            Software Development, where I learned about real-world development work. Talking about
+            my hobbies, I enjoy learning new technologies, listening to music, and exploring new 
+            things. My short-term goal is to get a good job as a Software Developer and improve my 
+            technical skills. My long-term goal is to become a successful software professional and 
+            build a good career in the IT industry. That's all about me. Thank you.
+        </p>
+         <a id="btn" href="https://ngo-donation-system-phi.vercel.app/">View My Project</a>
+    </div>
+    <div class="middle">
+        <div class="subscribe">
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" placeholder="abc@gmail.com">
+            <button>Subscribe</button>
+        </div>
+        <div class="about">
+            <h2>About Me</h2>
+            <p>
+                My name is Pranav Bagal, and I am from Navi Mumbai.
+                I have completed my Bachelor of Engineering in Computer
+                Science with specializations in IoT, Cybersecurity, and
+                Blockchain Technology. Currently, I am pursuing the PG
+                Certificate Programme in Advanced Computing from C-DAC Mumbai.
+                I enjoy learning new technologies and developing projects
+                using Java, Spring Boot, React, and MySQL. My goal is to
+                become a successful Software Developer.
+            </p>
+        </div>
+    </div>
+    <div class="card-row">
+        <div class="card">
+            <img src="images/Education.png" alt="Education Icon">
+            <h2>Education</h2>
+            <p>
+                I completed my Bachelor of Engineering in Computer Science
+                with specializations in IoT, Cybersecurity and Blockchain
+                Technology. Currently, I am pursuing PG Certificate Programme
+                in Advanced Computing from C-DAC Mumbai.
+            </p>
+        </div>
+        <div class="card">
+            <img src="images/Skills.png" alt="Skills Icon">
+            <h2>Skills</h2>
+            <p>
+                I have knowledge of Java, C++, HTML, CSS, JavaScript,
+                React, Spring Boot, MySQL and problem-solving.
+            </p>
+        </div>
+        <div class="card">
+            <img src="images/Projects.png" alt="Projects Icon">
+            <h2>Projects</h2>
+            <p>
+                I have developed a Smart Home Automation System,
+                AI Chatbot, Cybercrime Trap System using Honeypots
+                and a full-stack NGO Management Platform.
+            </p>
+        </div>
+    </div>
+     <h2>My Skills</h2>
+
+    <button id="btnSkills" onclick="showHide()">Hide</button>
+
+    <ul id="skills">
+        <li>Java</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+    </ul>
+
+    <script>
+        function showHide() {
+            let skills = document.getElementById("skills");
+            let btn = document.getElementById("btnSkills");
+
+            if (skills.style.display === "none") {
+                skills.style.display = "block";
+                btn.innerHTML = "Hide";
+            } else {
+                skills.style.display = "none";
+                btn.innerHTML = "Show";
+            }
+        }
+    </script>
+    <script src="js/index.js" defer></script>
+</body>
+</html>

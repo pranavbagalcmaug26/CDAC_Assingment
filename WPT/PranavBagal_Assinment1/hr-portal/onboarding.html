@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Onboarding</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>TechNova Employee Onboarding Form</h1>
+
+    <form action="https://example.com/onboarding"
+          method="post"
+          enctype="multipart/form-data">
+
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname"
+               placeholder="Enter full name" required>
+        <br><br>
+
+        <label for="email">Official Email:</label>
+        <input type="email" id="email" name="email"
+               placeholder="name@technova.com" required>
+        <br><br>
+
+        <label for="password">Temporary Password:</label>
+        <input type="password" id="password" name="password"
+               placeholder="Enter temporary password" required>
+        <br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+        <br><br>
+
+        <label for="joining">Joining Date:</label>
+        <input type="date" id="joining" name="joiningDate" required>
+        <br><br>
+
+        <label for="orientation">Orientation Slot:</label>
+        <input type="datetime-local" id="orientation"
+               name="orientationSlot" required>
+        <br><br>
+
+        <label for="reporting">Reporting Time:</label>
+        <input type="time" id="reporting" name="reportingTime" required>
+        <br><br>
+
+        <p>Gender:</p>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+        <br><br>
+
+        <label for="qualification">Highest Qualification:</label>
+        <select id="qualification" name="qualification" required>
+            <option value="">Select qualification</option>
+            <option value="ssc">SSC</option>
+            <option value="hsc">HSC</option>
+            <option value="diploma">Diploma</option>
+            <option value="graduate">Graduate</option>
+            <option value="postgraduate">Postgraduate</option>
+        </select>
+        <br><br>
+
+        <label for="department">Department:</label>
+        <select id="department" name="department" required>
+            <option value="">Select department</option>
+            <option value="it">IT</option>
+            <option value="hr">HR</option>
+            <option value="finance">Finance</option>
+            <option value="marketing">Marketing</option>
+            <option value="development">Development</option>
+        </select>
+        <br><br>
+
+        <label for="address">Current Address:</label>
+        <br>
+        <textarea id="address" name="address" rows="4" cols="35"
+                  placeholder="Enter current address" required></textarea>
+        <br><br>
+
+        <label for="document">Passport Photo or Resume:</label>
+        <input type="file" id="document" name="document"
+               accept="image/*,.pdf,.doc,.docx" required>
+        <br><br>
+
+        <input type="checkbox" id="declaration"
+               name="declaration" value="accepted" required>
+        <label for="declaration">
+            I declare that the information provided is correct.
+        </label>
+        <br><br>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+
+        <!-- This button does nothing yet because help functionality
+             has not been implemented using JavaScript or a backend. -->
+        <button type="button">Need Help?</button>
+
+    </form>
+
+    <h2>TechNova Office Location</h2>
+
+    <iframe
+        title="TechNova Office Map"
+        src="https://maps.google.com/maps?q=Technology%20Park%20Bangalore&t=&z=13&output=embed"
+        width="600"
+        height="350"
+        loading="lazy">
+    </iframe>
+
+</body>
+</html>
