@@ -1,0 +1,13 @@
+1. var is function-scoped and can be redeclared; let is block-scoped and cannot be redeclared in the same scope; const is block-scoped and cannot be reassigned. var is hoisted and initialized as undefined; let/const are hoisted but cannot be accessed before declaration (temporal dead zone).
+   Example: if (true) { var a=1; let b=2; const c=3; } // a exists outside the block; b and c do not.
+2. typeof 4 -> "number"; typeof "hello" -> "string"; typeof true -> "boolean"; typeof null -> "object" (a historical JavaScript quirk); typeof undefined -> "undefined". JavaScript is dynamically typed because a variable can hold values of different types at different times.
+3. == compares after possible type conversion; === compares value and type without conversion. || uses the right side for any falsy left value; ?? uses it only for null or undefined. Use ?? when 0 is a valid input.
+4. const student = { id: 1, name: "Asha", phones: ["9000000001", "9000000002"], address: { street: "Lake Road", city: "Navi Mumbai" } }; Read second phone: student.phones[1]; city: student.address.city. student?.address?.city returns undefined if address is null/undefined rather than throwing an error.
+5. (a) arr.filter(n => n % 2 === 0); (b) arr.map(n => n * 2); (c) arr.reduce((sum, n) => sum + n, 0).
+6. A callback is a function passed to another function to be called later. Arrow version: const add = (x, y) => x + y;
+7. Output: A, C, B. setTimeout schedules its callback for later; the remaining synchronous statements run first.
+8. Callback hell is deeply nested callbacks that are hard to read and maintain. Promises make asynchronous flow easier to chain. Promise states: pending, fulfilled, rejected. Common handling methods are then() and catch().
+9. async function run() { try { const r = await sum(2, 3); console.log(r); } catch (e) { console.log(e); } } run(); async is required because await is used inside the function and async makes it return a Promise.
+10. DOM means Document Object Model, the tree-like object representation of an HTML document. Find by id: document.getElementById("id"). innerHTML reads/writes HTML content inside an element; value reads/writes a form control's current value.
+11. fetch(url) returns a Promise that resolves to a Response. First await waits for the response; second await response.json() waits for the body to be parsed as JSON. response.status is the HTTP status code, such as 200 or 404.
+12. A regular expression (regex) is a pattern used to match text. It can check multiple rules in one concise pattern, such as required uppercase, lowercase, digit and special character, instead of many separate if statements.

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TechNova Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+<main class="login-card">
+    <h1>TechNova</h1>
+    <p>Employee Portal</p>
+    <form action="#" method="post" onsubmit="return validateLogin()">
+        <label for="username">Username</label>
+        <input id="username" name="username" placeholder="Enter username">
+        <span id="usernameError" class="error"></span>
+        <label for="password">Password</label>
+        <div class="row">
+            <input id="password" name="password" type="password" placeholder="Enter password" onkeyup="checkPassword()">
+            <button type="button" onclick="togglePassword()">Show</button>
+        </div>
+        <span id="passwordError" class="error"></span>
+        <button id="loginBtn" type="submit">Login</button>
+        <p id="loginMessage"></p>
+    </form>
+    <p>Need an account? <a href="onboarding.html">Sign Up</a></p>
+        <p><a href="directory.html">Employee directory</a></p>
+    </main><script src="js/login.js">
+
+    </script>
+</body>
+</html>
