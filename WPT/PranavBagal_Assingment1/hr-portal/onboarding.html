@@ -1,0 +1,16 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Employee Onboarding</title><link rel="stylesheet" href="style.css"></head><body><nav><a href="login.html">Login</a><a href="directory.html">Directory</a><a href="onboarding.html">Onboarding</a></nav><main><h1>New Employee Onboarding</h1><form action="https://example.com/onboarding" method="post" enctype="multipart/form-data">
+<label for="fullName">Full name</label><input id="fullName" name="fullName" placeholder="Your full name" required>
+<label for="officialEmail">Official email</label><input id="officialEmail" name="officialEmail" type="email" required>
+<label for="tempPassword">Temporary password</label><input id="tempPassword" name="tempPassword" type="password" required>
+<label for="dob">Date of birth</label><input id="dob" name="dob" type="date" required>
+<label for="joiningDate">Joining date</label><input id="joiningDate" name="joiningDate" type="date" required>
+<label for="orientation">Orientation slot</label><input id="orientation" name="orientation" type="datetime-local" required>
+<label for="reporting">Reporting time on day one</label><input id="reporting" name="reporting" type="time" required>
+<p>Gender</p><label><input type="radio" name="gender" value="female" required> Female</label><label><input type="radio" name="gender" value="male"> Male</label><label><input type="radio" name="gender" value="other"> Prefer not to say</label>
+<label for="qualification">Highest qualification</label><select id="qualification" name="qualification" required><option value="">Select qualification</option><option value="hsc">HSC</option><option value="diploma">Diploma</option><option value="bachelor">Bachelor's degree</option><option value="master">Master's degree</option><option value="phd">PhD</option></select>
+<label for="department">Department</label><select id="department" name="department" required><option value="">Select department</option><option>Engineering</option><option>Human Resources</option><option>Finance</option><option>Marketing</option><option>Support</option></select>
+<label for="address">Current address</label><textarea id="address" name="address" rows="3" required></textarea>
+<label for="file">Passport photo or resume</label><input id="file" name="file" type="file" required>
+<label><input type="checkbox" name="declaration" required> I declare that the information provided is correct.</label>
+<button type="submit">Submit</button><button type="reset">Reset</button><button type="button" title="Help feature is not implemented yet">Need help?</button><!-- Plain button intentionally has no action yet. -->
+</form><h2>TechNova office</h2><iframe title="TechNova office map" src="https://www.google.com/maps?q=Navi%20Mumbai%20business%20park&output=embed" width="100%" height="280" loading="lazy"></iframe></main></body></html>

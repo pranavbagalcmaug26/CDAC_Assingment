@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pranav Bagal | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Internal CSS is used for this page-specific tagline decoration. -->
+  <style>.page-tagline { letter-spacing: .08em; }</style>
+</head>
+<body>
+  <header id="main-nav">
+    <div class="brand"><img src="images/logo.svg" alt="PB logo" width="42" height="42"><strong>Pranav.dev</strong></div>
+    <nav>
+      <a href="index.html">Home</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <p class="page-tagline">BUILD • LEARN • CREATE</p>
+      <h1>Hi, I'm Pranav Bagal</h1>
+      <h2>Java Full Stack Developer</h2>
+      <p>BE Computer Science graduate interested in <span class="highlight">web development, IoT and cybersecurity</span>.</p>
+      <a class="button" href="projects.html">View my projects</a>
+    </section>
+    <section class="middle-row">
+      <div class="subscribe card">
+        <h3>Get project updates</h3>
+        <form action="#" method="get" onsubmit="alert('Thanks for subscribing!'); return false;">
+          <label for="subscribe-email">Email address</label>
+          <input id="subscribe-email" name="email" type="email" placeholder="you@example.com" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+      <div class="about card">
+        <h3>About me</h3>
+        <p>I enjoy building useful applications with Java, Spring Boot, React and SQL. I like learning by creating projects that solve everyday problems and exploring secure software design.</p>
+      </div>
+    </section>
+    <section class="card-row">
+      <article class="card"><div class="icon">🎓</div><h3>Education</h3><ol><li>BE Computer Science — 2026</li><li>HSC — 2022</li><li>SSC — 2020</li></ol></article>
+      <article class="card"><div class="icon">🧰</div><h3>Skills</h3><ul id="skills-list"><li>Java</li><li>Spring Boot</li><li>HTML & CSS</li><li>JavaScript</li><li>React</li><li>SQL</li></ul></article>
+      <article class="card"><div class="icon">💻</div><h3>Projects</h3><p>NGO social welfare platform, portfolio website and cybersecurity honeypot system.</p><a href="projects.html">Explore projects</a></article>
+    </section>
+    <p><a href="contact.html">Contact me</a> · <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></p>
+  </main>
+  <footer>© 2026 Pranav Bagal · Built with HTML and CSS</footer>
+</body>
+</html>
